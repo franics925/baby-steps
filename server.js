@@ -6,12 +6,15 @@ var logger = require('morgan');
 
 // new code below
 const session = require('express-session');
+const passport = require('passport');
 
 // Configures .env
 require('dotenv').config();
 
 // Require database config file {connect to DB}
 require('./config/database');
+// Require passport
+require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -32,6 +35,10 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }))
+
+ // app.use(session({... code above
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
