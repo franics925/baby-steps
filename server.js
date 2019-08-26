@@ -34,7 +34,7 @@ app.use(session({
   secret: 'baby',
   resave: false,
   saveUninitialized: true
-}))
+}));
 
  // app.use(session({... code above
 app.use(passport.initialize());
