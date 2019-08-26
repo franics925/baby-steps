@@ -44,7 +44,11 @@
     </ul>
   </nav>
   <main>
-    <h1><%= title %></h1>
+    <h1>
+      <% if (user) { %>
+      <%= user.name %>
+      <% } %>
+    </h1>
   </main>
 </body>
 </html>

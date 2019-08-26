@@ -1,18 +1,19 @@
 body {
   padding: 20px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: ivory;
+  background-color: white;
 }
 
 a {
-  color: rgb(216, 70, 184);
+  color: rgb(70, 128, 216);
 }
 
 body nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: ivory;
+  color: rgb(61, 58, 58);
 }
 
 body nav img {
