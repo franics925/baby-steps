@@ -8,7 +8,7 @@ function event(req, res) {
             users,
             user: req.user,
             name: req.query.name,
-            sortkey
+            // sortkey
         });
     });
 };

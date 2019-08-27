@@ -20,7 +20,12 @@
 body {
   padding: 20px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: white;
+  /* background-color: white; */
+}
+
+#splash {
+  background: url("images/rsz_1child-plays-superhero-pgq7ct9.jpg");
+  width: auto;
 }
 
 a {
@@ -31,20 +36,18 @@ body nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(214, 214, 209);
-  color: rgb(61, 58, 58);
+  background-color: #F2F0FF;
+  color: #8887A2;
   padding: 1em;
   height: 6%;
   width: 100%;
+  border-radius: 4px;
 }
 
 body nav img {
   display: flex;
   justify-content: flex-start;
-}
-
-body nav img {
-  width: 30px;
+  width: 4em;
   border-radius: 50%;
 }
 
@@ -60,5 +63,11 @@ body nav img {
   bottom: 0;
   height: 60px;
   width: 100%;
-  background: lightgray;
+  background-color: #F2F0FF;
+  border-radius: 4px;
+}
+
+}
+table tr th {
+
 }

@@ -1,15 +1,36 @@
 <%- include('../partials/header') %>
 <div class='childHeader'>
     <img src='/'>
-    <h2>Kieran</h2>
+    <h3 >Kieran is 2 years old</h3>
+    <p>some stuff about kieran</p>
 </div>
-<h5>Age: 2y 5mo</h5>
+<button>Edit Profile</button>
 <div id='milestones'>
-    <h4>Developmental Milestones</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat iste facilis dignissimos ipsa enim fuga nam vel consectetur recusandae vero est necessitatibus soluta, modi, magnam maxime sit. Dolor, impedit laudantium.</p>
+    <h4>Anticipated Milestones</h3>
+    <p>Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. Fugiat iste facilis dignissimos ipsa enim fuga nam vel consectetur recusandae vero est necessitatibus soluta, modi, magnam maxime sit. Dolor, impedit laudantium.</p>
 </div>
 <div id='events'>
-    <h4 class='eventTitle'>Kierans Events</h4>
-    <button class='eventTitle'>Add Event</button>
+    <h4 class='eventTitle'>Recorded Milestones</h4>
+    <button class='eventTitle'>New</button>
+    <table id='eventsTable' class="table">
+        <thead>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Milestone Title</th>
+            <th scope="col">Milestone Type</th>
+            <th scope="col">Details</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <!-- <tr>
+            <td>Grew 1 inch</td>
+            <td>Health</td>
+            <td>08/25/2019</td>
+            <td>Kieran grew 1 inches since we last measured him 3 months ago, he is now 36" tall</td>
+            
+        </tr> -->
+        </tbody>
+    </table>
 </div>
 <%- include('../partials/footer') %>
