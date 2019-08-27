@@ -1,3 +1,22 @@
+*::before, *::after {
+  box-sizing: inline-block;
+}
+.childHeader {
+  display: flex;
+  justify-content: flex-start;
+  text-align: flex-start;
+  color: darkgray;
+  padding-top: 1em;
+  padding-left: 2em;
+  width: 100%;
+  font-size: 20px;
+}
+.childHeader img{
+  display: flex;
+  text-align: flex-start;
+  padding-left: 0;
+  padding-right: 10%;
+}
 body {
   padding: 20px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -27,4 +46,19 @@ body nav img {
 body nav img {
   width: 30px;
   border-radius: 50%;
+}
+
+.eventTitle {
+  display: inline-block;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  padding: 1em;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background: lightgray;
 }
