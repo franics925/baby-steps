@@ -2,8 +2,10 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const indexCtrl = require('../controllers/index');
+const userCtrl = require('../controllers/users');
 /* GET home page. */
 router.get('/', indexCtrl.index);
+// router.get('/user', userCtrl.index);
 
 router.get('/auth/google', passport.authenticate(
   'google',
@@ -13,7 +15,7 @@ router.get('/auth/google', passport.authenticate(
 
 router.get('/oauth2callback', passport.authenticate(
   'google', {
-    successRedirect: "/",
+    successRedirect: "/user",
     failureRedirect: "/",
   }
 ));

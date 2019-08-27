@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<form id="new-child-form" action="/user" method="POST">
+    <img src="baby" alt="">
+    <label>Child's Name:</label>
+    <input type="text" name="childName">
+    <label>DOB:</label>
+    <input type="date" name="dob">
+    <label>Birth Location</label>
+    <input type="text" name="birthLocation">
+    <label>Birth Weight</label>
+    <input type="number" name="birthWeight">
+    <label>Birth Height</label>
+    <input type="number" name="birthHeight">
+    <label>Current Weight</label>
+    <input type="number" name="initialWeight">
+    <label>Current Height</label>
+    <input type="number" name="initialHeight">
+    <label>Physician</label>
+    <input type="text" name="Physician">
+    <label>Additional Information</label>
+    <input type="text" name="details">
+</form>
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<h1>
+    <% if (user) { %>
+    <%= user.name %>
+    <% } %>
+</h1>
+<div id='child'>
+    <h2>Children</h2>
+    <button type="button" id='addChild'>Add Child</button>
+</div>
+<table>
+    <th>ChildName</th>
+    <th>DOB</th>
+</table>
+
+<%- include('../partials/footer') %>

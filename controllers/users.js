@@ -12,6 +12,11 @@ function user(req, res) {
     });
 };
 
+function userPage(req, res) {
+    res.render('user/index');
+}
+
 module.exports = {
-    index
+    user,
+    userPage
 };
