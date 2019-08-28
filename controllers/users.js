@@ -13,10 +13,21 @@ function user(req, res) {
 };
 
 function userPage(req, res) {
-    res.render('user/index');
-}
+    res.render('user/index', {
+    title: 'Baby Steps',
+    user: req.user,
+    });
+};
+
+function userEdit(req, res) {
+    res.render('user/edit', {
+    title: 'Edit User',
+    user: req.user
+    });
+};
 
 module.exports = {
     user,
-    userPage
+    userPage,
+    userEdit
 };

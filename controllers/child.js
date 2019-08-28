@@ -12,11 +12,36 @@ function child(req, res) {
     });
 };
 
+// function childPage(req, res) {
+//     res.render('child/index') {
+//         user: req.user,
+//     });
+// };
+
+
 function childPage(req, res) {
-    res.render('child/index');
+    res.render('child', {
+        title: 'Child Page',
+        user: req.user,
+    });
+};
+function childNew(req, res) {
+    res.render('child/new', {
+        title: 'New Child',
+        user: req.user,
+    });
+};
+
+function childEdit(req, res) {
+    res.render('child/edit', {
+        title: 'Edit Child',
+        user: req.user,
+    });
 };
 
 module.exports = {
     child,
-    childPage
+    childPage,
+    childNew,
+    childEdit
 };

@@ -2,16 +2,12 @@ var express = require('express');
 var router = express.Router();
 var usersCtrl = require('../controllers/users');
 
-router.get('user/index', usersCtrl.user);
+
+router.get('/', usersCtrl.userPage);
+router.get('/edit', usersCtrl.userEdit);
 
 
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.render('user/index', {
-    user: req.user.name, 
-  });
-});
 
 module.exports = router;
 

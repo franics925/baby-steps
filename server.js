@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/user/child', childRouter);
-app.use('/event', eventRouter);
+app.use('/user/child/event', eventRouter);
 
 
 // catch 404 and forward to error handler
