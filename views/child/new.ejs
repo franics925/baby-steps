@@ -1,4 +1,4 @@
-<%- include('../partials/header') %>
+<!-- <%- include('../partials/header') %>
 
 <form id="new-child-form" action="/user" method="POST">
     <img src="baby" alt="">
@@ -23,4 +23,130 @@
 </form>
 
 
-<%- include('../partials/footer') %>
+<%- include('../partials/footer') %> -->
+
+
+<%- include('../partials/header') %>
+
+<br>
+<!-- <form>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Child's Name</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Date of Birth</label>
+        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Enter Details">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Milestone Type</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+        <option>Communications</option>
+        <option>Motor</option>
+        <option>Sensory</option>
+        <option>Feeding</option>
+        <option>Other</option>
+        </select>
+    </div>
+
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Additional Details</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="submitBtn">Submit</button>
+    <button type="button" class="cancelBtn">Cancel</button>
+    
+</form> -->
+
+<form>
+    <h3>General Info</h3>
+    <div class="form-row">    
+        <div class="form-group col-md-5">
+        <label for="childName">Name</label>
+        <input type="text" class="form-control" id="childName" placeholder="Child's Name">
+        </div>
+
+        <div class="form-group col-md-3">
+        <label for="childName">DOB</label>
+        <input type="date" class="form-control" id="dob">
+        </div>
+
+        <div class="form-group col-md-2">
+        <label for="gender">Sex</label>
+        <select class="form-control" id="gender">
+            <option></option>
+            <option>Boy</option>
+            <option>Girl</option>
+            <option>Other</option>
+        </select>
+        </div>
+    </div>    
+
+
+    <br><h4>Birth Size</h4>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+        <label for="bHeightFt">Feet</label>
+        <input type="number" min="0" class="form-control" id="bHeightFt" placeholder="Feet">
+        </div>
+
+        <div class="form-group col-md-4">
+        <label for="bHeightIn">Inches</label>
+        <input type="number" min="0" max="11" class="form-control" id="bHeightIn" placeholder="Inches">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+        <label for="bWeightLb">Pounds</label>
+        <input type="number" min="0" class="form-control" id="bWeightLb" placeholder="Pounds">
+        </div>
+
+        <div class="form-group col-md-4">
+        <label for="bWeightOz">Ounces</label>
+        <input type="number" min="0" max="15" class="form-control" id="bWeightOz" placeholder="Ounces">
+        </div>
+    </div>
+
+
+    <br><h4>Birth Location</h4>
+    <div class="form-group">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Market St">
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="San Francisco">
+        </div>
+
+        <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>California</option>
+            <option>other States</option>
+        </select>
+        </div>
+
+        <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input type="text" class="form-control" id="inputZip" placeholder="94111">
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="cancel" class="btn btn-secondary">Cancel</button>
+</form>
+
+<!-- <%- include('../partials/footer') %> -->
+
+
+</main>
+</body>
+</html>
