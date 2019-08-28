@@ -12,12 +12,6 @@ function child(req, res) {
     });
 };
 
-// function childPage(req, res) {
-//     res.render('child/index') {
-//         user: req.user,
-//     });
-// };
-
 
 function childPage(req, res) {
     res.render('child', {
@@ -25,6 +19,7 @@ function childPage(req, res) {
         user: req.user,
     });
 };
+
 function childNew(req, res) {
     res.render('child/new', {
         title: 'New Child',
