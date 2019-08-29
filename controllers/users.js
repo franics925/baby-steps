@@ -2,8 +2,8 @@ const User = require('../models/user');
 
 function user(req, res) {
     User.find({}, function (err, users) {
-        res.render('user/index', {
-            title: 'Baby Steps - User',
+        res.render('user', {
+            title: 'Baby Steps',
             users,
             user: req.user,
             name: req.query.name,
@@ -13,7 +13,7 @@ function user(req, res) {
 };
 
 function userPage(req, res) {
-    res.render('user/index', {
+    res.render('user', {
     title: 'Baby Steps',
     user: req.user,
     });

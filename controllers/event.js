@@ -1,17 +1,7 @@
 
 const User = require('../models/user');
+const Child = require('../models/user');
 
-// function event(req, res) {
-//     User.find({}, function (err, users) {
-//         res.render('user/index', {
-//             title: 'Baby Steps - Event',
-//             users,
-//             user: req.user,
-//             name: req.query.name,
-//             // sortkey
-//         });
-//     });
-// };
 
 function newEvent(req, res) {
     res.render('event/new', {
@@ -19,21 +9,27 @@ function newEvent(req, res) {
         user: req.user,
     });
 };
-function event(req, res) {
+function show(req, res) {
     res.render('event', {
         title: 'Baby Steps Event',
         user: req.user,
     });
 };
-function editEvent(req, res) {
+function edit(req, res) {
     res.render('event/edit', {
         title: 'Baby Steps Event',
         user: req.user,
     });
 };
 
+function create(req, res) {
+
+};
+
+
 module.exports = {
-    event,
-    newEvent,
-    editEvent
+    show,
+    new: newEvent,
+    edit,
+    create
 };
