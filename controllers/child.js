@@ -1,21 +1,9 @@
 const User = require('../models/user');
 
-function child(req, res) {
-    User.find({}, function (err, users) {
-        res.render('user/index', {
-            title: 'Baby Steps - Child',
-            users,
-            user: req.user,
-            name: req.query.name,
-            sortkey
-        });
-    });
-};
 
-
-function childPage(req, res) {
+function index(req, res) {
     res.render('child', {
-        title: 'Child Page',
+        title: 'Baby Steps',
         user: req.user,
     });
 };
@@ -27,7 +15,30 @@ function childNew(req, res) {
     });
 };
 
-function childEdit(req, res) {
+function create(req, res) {
+    // if (req.body) {
+    //     req.body.departs = undefined;
+    //   }
+      const child = new Child(req.body)
+      child.save(function (err) {
+    
+        //if errors rerender try again....
+        if (err) return res.render('user/child/new')
+        //redirects to main flights page.
+        res.redirect('/user')
+      });
+};
+
+function show(req, res) {
+    User.findById(req.params.id, function (err, user) {
+        Child.find({child: child._id}, function(err, children) {
+          res.render('flights/show', { airline: 'Flight Details', user, children});
+        });
+      });
+};
+
+
+function edit(req, res) {
     res.render('child/edit', {
         title: 'Edit Child',
         user: req.user,
@@ -35,8 +46,9 @@ function childEdit(req, res) {
 };
 
 module.exports = {
-    child,
-    childPage,
-    childNew,
-    childEdit
+    new: childNew,
+    create,
+    edit,
+    index,
+    show
 };

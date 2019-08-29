@@ -4,9 +4,9 @@ var childCtrl = require('../controllers/child');
 
 
 
-router.get('/edit', childCtrl.childEdit);
-router.get('/', childCtrl.childPage);
-router.get('/new', childCtrl.childNew);
+router.get('/edit', childCtrl.edit);
+router.get('/', childCtrl.index);
+router.get('/new', childCtrl.new);
 
 
 module.exports = router;
