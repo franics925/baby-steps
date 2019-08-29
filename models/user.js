@@ -17,10 +17,56 @@ const eventSchema = new Schema ({
 });
 
 const childSchema = new Schema ({
-    name: String,
-    dob: Date,
-    age: Number,
-    events: [eventSchema]
+    name: {
+        type: String,
+    },
+    dob: {
+        type: Date,
+    },
+    sex: {
+        type: String,
+        enum: ['', 'Boy', 'Girl', 'Other']
+    },
+    birHtFt: {
+        type: Number,
+    },
+    birHtIn: {
+        type: Number,
+    },
+    birWtLbs: {
+        type: Number,
+    },
+    birWtOz: {
+        type: Number,
+    },
+    curHtFt: {
+        type: Number,
+    },
+    curHtIn: {
+        type: Number,
+    },
+    curWtLbs: {
+        type: Number,
+    },
+    curWtOz: {
+        type: Number,
+    },
+    addDet: {
+        type: String,
+    },
+    birStreet: {
+        type: String,
+    },
+    birCity: {
+        type: String,
+    },
+    birState: {
+        type: String,
+    },
+    birZip: {
+        type: Number,
+    },
+    events: [eventSchema],
 }, {
     timestamps: true
 });
