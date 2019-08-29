@@ -21,9 +21,8 @@ function create(req, res) {
     //   }
       const child = new Child(req.body)
       child.save(function (err) {
-    
         //if errors rerender try again....
-        if (err) return res.render('user/child/new')
+        if (err) return res.render('/user/child/new')
         //redirects to main flights page.
         res.redirect('/user')
       });
@@ -32,14 +31,14 @@ function create(req, res) {
 function show(req, res) {
     User.findById(req.params.id, function (err, user) {
         Child.find({child: child._id}, function(err, children) {
-          res.render('flights/show', { airline: 'Flight Details', user, children});
+          res.render('/user', { user, children });
         });
       });
 };
 
 
 function edit(req, res) {
-    res.render('child/edit', {
+    res.render('/user/child/edit', {
         title: 'Edit Child',
         user: req.user,
     });
