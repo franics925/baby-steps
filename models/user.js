@@ -123,4 +123,10 @@ const userSchema = new Schema ({
     timestamps: true
 });
 
+const User = mongoose.model('User', userSchema);
+const Child = mongoose.model('Child', childSchema);
+const Event = mongoose.model('Event', eventSchema);
+
 module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Child', childSchema);
+module.exports = mongoose.model('Event', eventSchema);
