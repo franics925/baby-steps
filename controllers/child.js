@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Child = require('../models/user'); 
 
 
 function index(req, res) {
@@ -16,18 +17,24 @@ function childNew(req, res) {
 };
 
 function create(req, res) {
-    // if (req.body) {
-    //     req.body.departs = undefined;
-    //   }
-      const child = new Child(req.body)
-      console.log('child created', child, user);
-      child.save(function (err) {
-        //if errors rerender try again....
-        if (err) return res.render('/user/child/new')
-        //redirects to main flights page.
-        res.redirect('/user')
+    User.findById(req.params.id, function(err, user) {
+        user.child.push(req.body);
+        user.save(function(err, user) {
+        res.redirect(`/user`);
+        });
+    });
+    // // if (req.body) {
+    // //     req.body.departs = undefined;
+    // //   }
+    //   const child = new Child(req.body)
+    //   console.log('child created', child, user);
+    //   child.save(function (err) {
+    //     //if errors rerender try again....
+    //     if (err) return res.render('/user/child/new')
+    //     //redirects to main flights page.
+    //     res.redirect('/user')
         
-      });
+    //   });
 };
 
 function show(req, res) {

@@ -12,8 +12,9 @@ function user(req, res) {
     });
 };
 
+
 function userPage(req, res) {
-    res.render('user', {
+    res.render('user/index', {
     title: 'Baby Steps',
     user: req.user,
     });

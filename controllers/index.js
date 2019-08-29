@@ -2,7 +2,7 @@ const User = require('../models/user');
 
 function index(req, res) {
     User.find({}, function (err, users) {
-        res.render('Index', {
+        res.render('index', {
             title: 'Baby Steps',
             users,
             user: req.user,
