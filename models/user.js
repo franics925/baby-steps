@@ -3,14 +3,12 @@ var Schema = mongoose.Schema;
 
 
 const eventSchema = new Schema ({
-    title: {
+    evTitle: {
+        type: String,    },
+    evDate: Date,
+    evType: {
         type: String,
-        required: true
-    },
-    date: Date,
-    type: {
-        type: String,
-        enum: ['Communications', 'Motor', 'Sensory', 'Feeding', 'Other'],
+        enum: ['Communication', 'Motor', 'Sensory', 'Growth', 'Feeding', 'Other'],
     },
     curHtFt: {
         type: Number,
@@ -29,7 +27,7 @@ const eventSchema = new Schema ({
         min: 0,
         max: 15,
     },
-    addDet: {
+    evDetails: {
         type: String,
     },
     child: {
@@ -47,6 +45,9 @@ const childSchema = new Schema ({
     },
     dob: {
         type: Date,
+    },
+    age: {
+        type: Number,
     },
     sex: {
         type: String,
@@ -111,12 +112,12 @@ const childSchema = new Schema ({
     addDet: {
         type: String,
     },
+    milestones: {
+        type: Array,
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-    },
-    milestones: {
-        type: Array,
     },
     events: [eventSchema],
 }, {

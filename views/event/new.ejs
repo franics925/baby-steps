@@ -2,36 +2,66 @@
 
 <br>
 <form>
-
+    <h2>New Milestone:</h2><br>
     <div class="form-group">
         <label for="exampleFormControlTextarea1">Milestone Title</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlSelect1">Milestone Type</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-        <option>Communications</option>
+        <label for="evType">Milestone Type</label>
+        <select class="form-control" id="evType">
+        <option>Communication</option>
+        <option>Feeding</option>
+        <option>Growth</option>
         <option>Motor</option>
         <option>Sensory</option>
-        <option>Feeding</option>
         <option>Other</option>
         </select>
     </div>
 
-    <div class="form-group">
+    <div class="form-group col-md-3">
         <label for="exampleFormControlInput1">Date</label>
         <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Enter Details">
     </div>
 
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Additional Details</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+        <label for="exampleFormControlTextarea1">Details</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
     </div>
+
+    <br><h4>Height and Weight:</h4><br>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+        <label for="bHeightFt">Feet</label>
+        <input type="number" min="0" class="form-control" id="bHeightFt" placeholder="Feet">
+        </div>
+    
+        <div class="form-group col-md-4">
+        <label for="bHeightIn">Inches</label>
+        <input type="number" min="0" max="11" class="form-control" id="bHeightIn" placeholder="Inches">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+        <label for="bWeightLb">Pounds</label>
+        <input type="number" min="0" class="form-control" id="bWeightLb" placeholder="Pounds">
+        </div>
+    
+            <div class="form-group col-md-4">
+            <label for="bWeightOz">Ounces</label>
+            <input type="number" min="0" max="15" class="form-control" id="bWeightOz" placeholder="Ounces">
+        </div>
+    </div><br>
+
 
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="cancel" class="btn btn-secondary">Cancel</button>
     
 </form>
 
-<%- include('../partials/footer') %>
+    </main>
+    </body>
+</html>
+
+<!-- <%- include('../partials/footer') %> -->
