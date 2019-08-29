@@ -115,10 +115,10 @@ const childSchema = new Schema ({
     milestones: {
         type: Array,
     },
-    user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-    },
+    // user: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    // },
     events: [eventSchema],
 }, {
     timestamps: true

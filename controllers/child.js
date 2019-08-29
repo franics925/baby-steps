@@ -20,11 +20,13 @@ function create(req, res) {
     //     req.body.departs = undefined;
     //   }
       const child = new Child(req.body)
+      console.log('child created', child, user);
       child.save(function (err) {
         //if errors rerender try again....
         if (err) return res.render('/user/child/new')
         //redirects to main flights page.
         res.redirect('/user')
+        
       });
 };
 

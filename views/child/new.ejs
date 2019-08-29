@@ -7,17 +7,17 @@
     <div class="form-row">    
         <div class="form-group col-md-5">
         <label for="childName">Name</label>
-        <input type="text" class="form-control" id="childName" placeholder="Child's Name">
+        <input type="text" class="form-control" name="childName" placeholder="Child's Name">
         </div>
 
         <div class="form-group col-md-3">
         <label for="dob">DOB</label>
-        <input type="date" class="form-control" id="dob">
+        <input type="date" class="form-control" name="dob">
         </div>
 
         <div class="form-group col-md-2">
         <label for="sex">Sex</label>
-        <select class="form-control" id="sex">
+        <select class="form-control" name="sex">
             <option></option>
             <option>Boy</option>
             <option>Girl</option>
@@ -31,23 +31,23 @@
     <div class="form-row">
         <div class="form-group col-md-5">
         <label for="birHtFt">Feet</label>
-        <input type="number" min="0" class="form-control" id="birHtFt" placeholder="Feet">
+        <input type="number" min="0" class="form-control" name="birHtFt" placeholder="Feet">
         </div>
 
         <div class="form-group col-md-4">
         <label for="birHtIn">Inches</label>
-        <input type="number" min="0" max="11" class="form-control" id="birHtIn" placeholder="Inches">
+        <input type="number" min="0" max="11" class="form-control" name="birHtIn" placeholder="Inches">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-md-5">
         <label for="birWtLbs">Pounds</label>
-        <input type="number" min="0" class="form-control" id="birWtLbs" placeholder="Pounds">
+        <input type="number" min="0" class="form-control" name="birWtLbs" placeholder="Pounds">
         </div>
 
         <div class="form-group col-md-4">
         <label for="birWtOz">Ounces</label>
-        <input type="number" min="0" max="15" class="form-control" id="birWtOz" placeholder="Ounces">
+        <input type="number" min="0" max="15" class="form-control" name="birWtOz" placeholder="Ounces">
         </div>
     </div>
 
@@ -55,23 +55,23 @@
     <br><h4>Birth Location</h4>
     <div class="form-group col-md-10">
         <label for="hospital">Hospital</label>
-        <input type="text" class="form-control" id="hospital" placeholder="UCSF Benioff Children's Hospital">
+        <input type="text" class="form-control" name="hospital" placeholder="UCSF Benioff Children's Hospital">
     </div>
 
     <div class="form-group col-md-10">
         <label for="birStreet">Address</label>
-        <input type="text" class="form-control" id="birStreet" placeholder="1234 Market St">
+        <input type="text" class="form-control" name="birStreet" placeholder="1234 Market St">
     </div>
 
     <div class="form-row">
         <div class="form-group col-md-6">
         <label for="birCity">City</label>
-        <input type="text" class="form-control" id="birCity" placeholder="San Francisco">
+        <input type="text" class="form-control" name="birCity" placeholder="San Francisco">
         </div>
 
         <div class="form-group col-md-4">
         <label for="birState">State</label>
-        <select id="birState" class="form-control">
+        <select name="birState" class="form-control">
             <option selected>Choose...</option>
             <option>California</option>
             <option>other States</option>
@@ -80,10 +80,10 @@
 
         <div class="form-group col-md-2">
         <label for="birZip">Zip</label>
-        <input type="number" min="00000" max="99999" class="form-control" id="birZip" placeholder="94111">
+        <input type="number" min="00000" max="99999" class="form-control" name="birZip" placeholder="94111">
         </div>
     </div>
-    
+    <input type="hidden" value="<%= user._id%>">
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="cancel" class="btn btn-secondary">Cancel</button>
 </form>
