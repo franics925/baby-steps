@@ -1,5 +1,5 @@
 const User = require('../models/user');
-const Child = require('../models/user'); 
+
 
 
 function index(req, res) {
@@ -21,6 +21,7 @@ function create(req, res) {
         user.child.push(req.body);
         user.save(function(err, user) {
         res.redirect(`/user`);
+        console.log(user);
         });
     });
     // // if (req.body) {
@@ -38,12 +39,12 @@ function create(req, res) {
 };
 
 function show(req, res) {
-    User.findById(req.params.id, function (err, user) {
-        Child.find({child: child._id}, function(err, children) {
-          res.render('/user', { user, children });
-        });
+    User.findById(req.params.id, function (err, parent) {
+
+        console.log(parent);
+          res.render('/user', { parent, user: req.user.id });
       });
-};
+    };
 
 
 function edit(req, res) {
