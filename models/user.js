@@ -40,7 +40,7 @@ const eventSchema = new Schema ({
 
 
 const childSchema = new Schema ({
-    name: {
+    childName: {
         type: String,
     },
     dob: {

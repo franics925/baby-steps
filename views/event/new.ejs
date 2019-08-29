@@ -4,60 +4,63 @@
 <form>
     <h2>New Milestone:</h2><br>
     <div class="form-group">
-        <label for="exampleFormControlTextarea1">Milestone Title</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+        <label for="evTitle">Milestone Title</label>
+        <input class="form-control" id="evTitle" rows="1"></input>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="evDate">Date</label>
+            <input type="date" class="form-control" id="evDate" placeholder="Enter Details">
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="evType">Milestone Type</label>
+            <select class="form-control" id="evType">
+            <option>Communication</option>
+            <option>Feeding</option>
+            <option>Growth</option>
+            <option>Motor</option>
+            <option>Sensory</option>
+            <option>Other</option>
+            </select>
+        </div>
     </div>
 
     <div class="form-group">
-        <label for="evType">Milestone Type</label>
-        <select class="form-control" id="evType">
-        <option>Communication</option>
-        <option>Feeding</option>
-        <option>Growth</option>
-        <option>Motor</option>
-        <option>Sensory</option>
-        <option>Other</option>
-        </select>
-    </div>
-
-    <div class="form-group col-md-3">
-        <label for="exampleFormControlInput1">Date</label>
-        <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="Enter Details">
-    </div>
-
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Details</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+        <label for="evDetails">Details</label>
+        <textarea class="form-control" id="evDetails" rows="4"></textarea>
     </div>
 
     <br><h4>Height and Weight:</h4><br>
     <div class="form-row">
         <div class="form-group col-md-5">
-        <label for="bHeightFt">Feet</label>
-        <input type="number" min="0" class="form-control" id="bHeightFt" placeholder="Feet">
+        <label for="curHtFt">Feet</label>
+        <input type="number" min="0" class="form-control" id="curHtFt" placeholder="Feet">
         </div>
     
         <div class="form-group col-md-4">
-        <label for="bHeightIn">Inches</label>
-        <input type="number" min="0" max="11" class="form-control" id="bHeightIn" placeholder="Inches">
+        <label for="curHtIn">Inches</label>
+        <input type="number" min="0" max="11" class="form-control" id="curHtIn" placeholder="Inches">
         </div>
     </div>
+
     <div class="form-row">
         <div class="form-group col-md-5">
-        <label for="bWeightLb">Pounds</label>
-        <input type="number" min="0" class="form-control" id="bWeightLb" placeholder="Pounds">
+        <label for="curWtLbs">Pounds</label>
+        <input type="number" min="0" class="form-control" id="curWtLbs" placeholder="Pounds">
         </div>
     
-            <div class="form-group col-md-4">
-            <label for="bWeightOz">Ounces</label>
-            <input type="number" min="0" max="15" class="form-control" id="bWeightOz" placeholder="Ounces">
+        <div class="form-group col-md-4">
+        <label for="curWtOz">Ounces</label>
+        <input type="number" min="0" max="15" class="form-control" id="CurWtOz" placeholder="Ounces">
         </div>
     </div><br>
 
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <button type="cancel" class="btn btn-secondary">Cancel</button>
-    
+    <div class="buttons">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="cancel" class="btn btn-secondary">Cancel</button>
+    </div>
 </form>
 
     </main>
