@@ -32,6 +32,10 @@ const eventSchema = new Schema ({
     addDet: {
         type: String,
     },
+    child: {
+        type: Schema.Types.ObjectId,
+        ref: 'Child',
+    },
 }, {
     timestamps: true
 });
@@ -106,6 +110,13 @@ const childSchema = new Schema ({
     },
     addDet: {
         type: String,
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+    },
+    milestones: {
+        type: Array,
     },
     events: [eventSchema],
 }, {
