@@ -38,13 +38,6 @@ function create(req, res) {
     //   });
 };
 
-function show(req, res) {
-    User.findById(req.params.id, function (err, parent) {
-
-        console.log(parent);
-          res.render('/user', { parent, user: req.user.id });
-      });
-    };
 
 
 function edit(req, res) {
@@ -53,6 +46,26 @@ function edit(req, res) {
         user: req.user,
     });
 };
+
+function show(req, res) {
+    // User.child.id(req.params.id, function(err, foundUser){
+        console.log(req.params.id);
+            res.render('child/show', {
+                user: req.user
+            });
+        // });
+    };
+
+
+    // User.child._id(req.params.id, function( err, child){
+    //     console.log(child);
+    //     res.render('child/index', { child, user: req.user });
+    // });
+    // User.findById(req.params.id, function (err, parent) {
+    //     // parent.child(req.params.id)
+    //     console.log(req.params.id);
+    // });
+// };
 
 function deleteChild(req, res) {
     User.findById(req.user._id, function(err, foundUser) {

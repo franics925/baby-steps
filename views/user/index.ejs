@@ -12,16 +12,23 @@
 <table class="table">
     <thead>
         <tr>
-        <th scope="col">DOB</th>
+        <th scope="col">View</th>
         <th scope="col">Name</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Delete</th>
+
         </tr>
     </thead>
     <tbody>
         <% user.child.forEach(function(c) { %>
             <tr>
-                <td><%= c.dob %></td>
+                <td>
+                <form action="/user/child/<%= c._id %>" method="GET">
+                    <button type="submit">View</button>
+                </form>
+                </td>
                 <td><%= c.childName %></td>
-                <!-- <td><a href="/user/child/<%= c._id %>"></a></td> -->
+                <td><%= c.dob %></td>
                 <td>
                     <form action="/user/child/<%= c._id %>?_method=DELETE" method="POST">
                         <button type="submit">Delete</button>
