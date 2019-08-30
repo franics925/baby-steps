@@ -24,18 +24,6 @@ function create(req, res) {
         console.log(user);
         });
     });
-    // // if (req.body) {
-    // //     req.body.departs = undefined;
-    // //   }
-    //   const child = new Child(req.body)
-    //   console.log('child created', child, user);
-    //   child.save(function (err) {
-    //     //if errors rerender try again....
-    //     if (err) return res.render('/user/child/new')
-    //     //redirects to main flights page.
-    //     res.redirect('/user')
-        
-    //   });
 };
 
 
@@ -48,12 +36,10 @@ function edit(req, res) {
 };
 
 function show(req, res) {
-    // User.child.id(req.params.id, function(err, foundUser){
         console.log(req.params.id);
             res.render('child/show', {
                 user: req.user
             });
-        // });
     };
 
 
@@ -75,15 +61,7 @@ function deleteChild(req, res) {
         });
     });
 };
-//TODO remove comments below
-//          console.log(foundUser, req.params.id);
-//         // console.log("child", foundUser.child[0][_id]);
-//         // foundUser.child.forEach( function(c) {
-//         //     //if (req.params._id === )
-//         // });
-//         res.redirect('/user');
-//     });
-// };
+
 
 module.exports = {
     new: childNew,

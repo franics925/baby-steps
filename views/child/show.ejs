@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <div class='childHeader'>
-    <img src='/'>
+    <img src='/' class="rounded float-left" alt="...">
     <h3 >Kieran is 2 years old</h3><br>
     <p>  some stuff about kieran</p>
 </div>
@@ -15,16 +15,30 @@
     <table id='eventsTable' class="table">
         <thead>
         <tr>
+            <th scope="col">View</th>
             <th scope="col">Date</th>
             <th scope="col">Milestone Title</th>
-            <th scope="col">Milestone Type</th>
-            <th scope="col">Details</th>
+            <!-- <th scope="col">Milestone Type</th> -->
+            <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
-            <tr>
- 
-            </tr>
+            <% user.child.forEach(function(c) { %>
+                <tr>
+                    <td>
+                    <form action="/user/child/<%= c._id %>" method="GET">
+                        <button type="submit">View</button>
+                    </form>
+                    </td>
+                    <td><%= c.childName %></td>
+                    <td><%= c.dob %></td>
+                    <td>
+                        <form action="/user/child/<%= c._id %>?_method=DELETE" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
         </tbody>
     </table>
 </div>
