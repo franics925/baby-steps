@@ -1,16 +1,16 @@
 # Baby Steps
 Baby Steps is an app for parents/guardians to track of the developmental milestones of their children.
 
-##Tech
-nodeJS, mongoose, Bootstrap, CSS, express, HTML
+## Tech
+Node.js, Mongoose, MongoDB Atlas, Express Bootstrap, CSS, HTML
 
-##Screen Shots
+## Screen Shots
 
 ##Getting Started
 To use this app, navigate to the link below:
 https://ga-baby-steps.herokuapp.com/
 
-##Next Steps
+## Next Steps
 1. Finish milestones CRUD
 2. Enable search across milestones
 3. Enable sort by milestone categories
