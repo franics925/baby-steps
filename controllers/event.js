@@ -2,11 +2,9 @@
 const User = require('../models/user');
 const Child = require('../models/user');
 
-
 function create(req, res) {
 
 };
-
 function newEvent(req, res) {
     res.render('event/new', {
         title: 'Baby Steps New Event',
@@ -25,8 +23,6 @@ function edit(req, res) {
         user: req.user,
     });
 };
-
-
 
 module.exports = {
     show,

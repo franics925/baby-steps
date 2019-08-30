@@ -11,13 +11,11 @@ function user(req, res) {
         });
     });
 };
-
 function showAllChildren(req, res) {
     User.child.find({}, function (err, child) {
 
     });
 };
-
 function userPage(req, res) {
     res.render('user/index', {
     title: 'Baby Steps',
@@ -25,13 +23,13 @@ function userPage(req, res) {
     childName: user.childName,
     });
 };
-
 function userEdit(req, res) {
     res.render('user/edit', {
     title: 'Edit User',
     user: req.user
     });
 };
+
 
 module.exports = {
     user,
