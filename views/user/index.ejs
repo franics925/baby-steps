@@ -5,18 +5,17 @@
     <%= user.name %>
     <% } %>
 </h1><br><br>
-<div id='child' class="form-row">
-    <h2>Your Children:</h2>
+<!-- <div id='child' class="form-row">
     <button type="button" id='addChild'>Add Child</button>
-</div><br><br>
+</div><br><br> -->
 <table class="table">
     <thead>
         <tr>
         <th scope="col">View</th>
         <th scope="col">Name</th>
         <th scope="col">DOB</th>
+        <th scope="col">Hospital</th>
         <th scope="col">Delete</th>
-
         </tr>
     </thead>
     <tbody>
@@ -29,6 +28,7 @@
                 </td>
                 <td><%= c.childName %></td>
                 <td><%= c.dob %></td>
+                <td><%= c.hospital %></td>
                 <td>
                     <form action="/user/child/<%= c._id %>?_method=DELETE" method="POST">
                         <button type="submit">Delete</button>
@@ -37,6 +37,10 @@
             </tr>
         <% }); %>
     </tbody>
-</table>
+</table><br><br>
+
+<div id='child' class="form-row">
+    <button type="button" id='addChild'>Add Child</button>
+</div><br><br>
 
 <%- include('../partials/footer') %>
