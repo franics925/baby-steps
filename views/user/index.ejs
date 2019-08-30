@@ -19,29 +19,16 @@
     <tbody>
         <% user.child.forEach(function(c) { %>
             <tr>
-                <td><%= c.DOB %></td>
-                <td><%= c.name %></td>
-                <td><a href="/user/child/<%= user._id %>"></a></td>
+                <td><%= c.dob %></td>
+                <td><%= c.childName %></td>
+                <!-- <td><a href="/user/child/<%= c._id %>"></a></td> -->
+                <td>
+                    <form action="/user/child/<%= c._id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         <% }); %>
-        <!-- <tr><%%>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr> -->
     </tbody>
 </table>
 

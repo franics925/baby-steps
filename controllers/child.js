@@ -54,10 +54,29 @@ function edit(req, res) {
     });
 };
 
+function deleteChild(req, res) {
+    User.findById(req.user._id, function(err, foundUser) {
+        foundUser.child.id(req.params.id).remove();
+        foundUser.save(function(err) {
+            res.redirect('/user');
+        });
+    });
+};
+//TODO remove comments below
+//          console.log(foundUser, req.params.id);
+//         // console.log("child", foundUser.child[0][_id]);
+//         // foundUser.child.forEach( function(c) {
+//         //     //if (req.params._id === )
+//         // });
+//         res.redirect('/user');
+//     });
+// };
+
 module.exports = {
     new: childNew,
     create,
     edit,
     index,
-    show
+    show,
+    deleteChild
 };

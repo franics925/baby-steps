@@ -3,17 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-// new code below
+var methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
 
-// Configures .env
-require('dotenv').config();
 
-// Require database config file {connect to DB}
+require('dotenv').config();
 require('./config/database');
-// Require passport
 require('./config/passport');
 
 const indexRouter = require('./routes/index');
@@ -42,6 +38,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/user', userRouter);
