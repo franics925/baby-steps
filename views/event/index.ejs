@@ -1,6 +1,68 @@
 <%- include('../partials/header') %>
 
-Event page
+<br>
+<form>
+    <h2>New Milestone:</h2><br>
+    <div class="form-group">
+        <label for="evTitle">Milestone Title</label>
+        <input class="form-control" name="evTitle" rows="1"></input>
+    </div>
 
+    <div class="form-row">
+        <div class="form-group col-md-3">
+            <label for="evDate">Date</label>
+            <input type="date" class="form-control" name="evDate" placeholder="Enter Details">
+        </div>
 
-<%- include('../partials/footer') %>
+        <div class="form-group col-md-4">
+            <label for="evType">Milestone Type</label>
+            <select class="form-control" name="evType">
+            <option>Communication</option>
+            <option>Feeding</option>
+            <option>Growth</option>
+            <option>Motor</option>
+            <option>Sensory</option>
+            <option>Other</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="evDetails">Details</label>
+        <textarea class="form-control" name="evDetails" rows="4"></textarea>
+    </div>
+
+    <br><h4>Height and Weight:</h4><br>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+        <label for="curHtFt">Feet</label>
+        <input type="number" min="0" class="form-control" name="curHtFt" placeholder="Feet">
+        </div>
+    
+        <div class="form-group col-md-4">
+        <label for="curHtIn">Inches</label>
+        <input type="number" min="0" max="11" class="form-control" name="curHtIn" placeholder="Inches">
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-5">
+        <label for="curWtLbs">Pounds</label>
+        <input type="number" min="0" class="form-control" name="curWtLbs" placeholder="Pounds">
+        </div>
+    
+        <div class="form-group col-md-4">
+        <label for="curWtOz">Ounces</label>
+        <input type="number" min="0" max="15" class="form-control" name="CurWtOz" placeholder="Ounces">
+        </div>
+    </div><br>
+
+    <div class="buttons">
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="cancel" class="btn btn-secondary">Cancel</button>
+    </div>
+</form>
+
+    </main>
+    </body>
+</html>
