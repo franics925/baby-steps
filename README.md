@@ -1,4 +1,5 @@
 # Baby Steps
+Baby Steps is an app for parents/guardians to track of the developmental milestones of their children.
 
 ##Tech
 nodeJS, mongoose, Bootstrap, CSS, express, HTML
